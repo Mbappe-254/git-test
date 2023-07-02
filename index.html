@@ -18,6 +18,9 @@
 <body>
 
     <header class="jumbotron jumbotron-fluid">
+        <div class="col-4 col-sm-3 col-md-2 ml-6">
+       <a href="#reserveForm"><button type="button" class="btn btn-primary btn-lg">Reserve Campsite</button></a>
+        </div>
         <div class="container" >
             <div class="row">
                 <div class="col-4 col-sm-3 col-md-2 align-self-center">
@@ -94,10 +97,10 @@
          <div class="card">
          <h3 class="card-header bg-info text-white">Reserve a campsite</h3>
          <div class="card-body">
-             <form class="form-group">
+             <form class="form-group form-control" id="reserveForm">
                  <div class="row">
-                     <label for= "numberofcampers text-light"> Number of Campers </label>
-                     <div class="col"><select name="numCampers" id="numCampers">
+                     <label class="col-sm-6" for="numberofcampers text-light"> Number of Campers </label>
+                     <div class="col-sm-6 "><select name="numCampers" id="numCampers">
                          <option value="select..">Select...</option>
                          <option value="one">1</option>
                          <option value="one">2</option>
@@ -106,7 +109,7 @@
                          <option value="one">5</option>
                          <option value="one">6</option>
                      </select>
-                 </div>
+                    </div>
                  </div>
                     <div class="row">
                         <label class="col-form-label" for="date">Date</label>
