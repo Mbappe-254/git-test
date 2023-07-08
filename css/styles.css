@@ -1,5 +1,6 @@
 body {
     font-family: "Open Sans", sans-serif;
+    background-color: aquamarine;
 }
 
 h1, h2, h3 {
@@ -16,7 +17,7 @@ header h2 {
 
 .site-footer {
     background-image: linear-gradient(#CEC8FF, white);
-    padding: 20px 0;
+    padding: 20px;
 }
 
 .jumbotron {
@@ -32,7 +33,7 @@ header h2 {
     min-height: 200px;
 }
 .navbar-dark{
-    background-color: #901CAD;
+    background-color:cadetblue;
 }
 .carousel-caption{
     background-color: rgba(0,0,0,0.5);
@@ -40,3 +41,11 @@ header h2 {
 .carousel{
     border:solid #5637DD;
 }
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+ 
