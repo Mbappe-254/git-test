@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/styles.css" />
     <title>Nucamp: A Better Way To Camp</title>
 </head>
+npm start
 
 <body>
     <header class="jumbotron jumbotron-fluid">
@@ -217,7 +218,7 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="d-block w-100" src="img/clear sky.jpg" alt="Breadcrumb Trail Campground" />
+                            <img class="d-block w-100" src="img/breadcrumb-trail.jpg" alt="Breadcrumb Trail Campground" />
                             <div class="carousel-caption">
                                 <h3>Breadcrumb Trail Campground</h3>
                                 <p class="d-none d-sm-block"> Let Nucamp be your guide to this
@@ -225,7 +226,7 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="img/cosby.jpg" alt="cosby" />
+                            <img class="d-block w-100" src="img/chrome-river-thumb.jpg" alt="chrome-river-thumb" />
                             <div class="carousel-caption">
                                 <h3>React Lake campground</h3>
                                 <p class="d-none d-sm-block">Nestled in the foothills of the chrome
@@ -236,7 +237,7 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="img/Torrent.jpg" alt="Torrent" />
+                            <img class="d-block w-100" src="img/chrome-river.jpg" alt="chrome-river" />
                             <div class="carousel-caption">
                                 <h3>Chrome River Campground</h3>
                                 <p class="d-none d-sm-block">Spend a few sunny days and starry nights
@@ -253,6 +254,9 @@
                         <span class="carousel-control-next-icon"></span>
                         <span class="sr-only">Next</span>
                     </a>
+                        <button class="btn btn-danger btn-sm" id="carouselButton">
+                            <i class="fa fa-pause"></i>
+                        </button>
                 </div>
             </div>
         </div>
@@ -341,7 +345,22 @@
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
+        <script>
+            $(function() {
+                $(".carousel").carousel( { interval: 2000 } );
+                $("#carouselButton").click(function(){
+                    if ($("#carouselButton").children("i").hasClass("fa-pause")) {
+                        $(".carousel").carousel("pause");
+                        $("#carouselButton").children("i").removeClass("fa-pause");
+                        $("#carouselButton").children("i").addClass("fa-play");
+                    } else {
+                        $(".carousel").carousel("cycle");
+                        $("#carouselButton").children("i").removeClass("fa-play");
+                        $("#carouselButton").children("i").addClass("fa-pause"); 
+                    }
+                });
+            });
+        </script>
 
 </body>
 
